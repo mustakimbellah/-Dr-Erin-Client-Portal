@@ -12,7 +12,7 @@ const Home1Section = () => {
                     <img
                         width="auto"
                         height="300"
-                        className='text-center'
+                        className='text-center '
                         src={covid} alt="" />
                     <p className='text-start'>Everyone is talking about coronavirus disease (COVID-19), and everywhere you look there’s information on the virus and how to protect yourself from it. Knowing the facts is key to being properly prepared and protecting yourself and your loved ones.Be sure to get your facts from reliable sources, like UNICEF and the World Health Organization. UNICEF is working with global health experts around the clock to provide accurate information. Information you can trust is grounded in the latest scientific evidence. We’ll continue to provide the latest updates, explainers for parents and teachers, and resources for media as new information becomes available, so check back to stay informed of the best ways to protect yourself and your family.Please share this information with your family, friends and colleagues to help ensure people have the facts about COVID-19 and can protect their health</p>
                 </Accordion.Body >
