@@ -49,12 +49,15 @@ const Login = () => {
         <div className='container mx-auto'>
             <h1 className='text-center text-dark mb-3 fw-bolder'>Login</h1>
             <div className='row d-flex justify-content-center'>
+
                 <div className="col-9 col-md-7 ">
 
-                    <div className='d-flex m-2'>
-                        <Button className='d-inline mx-2' variant="success" onClick={handleSignInGoogle}><FaGoogle></FaGoogle> Login with Google  <FaGoogle></FaGoogle></Button>
+                    <div className='d-flex m-4 '>
+                        <Button className='d-inline mx-2  w-100' variant="primary" onClick={handleSignInGoogle}><FaGoogle></FaGoogle> Login with Google  <FaGoogle></FaGoogle></Button>
 
                     </div>
+
+                    <h4 className='text-center text-success'>OR</h4>
 
                     <ButtonGroup vertical className='mx-auto w-100 gap-3 '>
                         <Form className='w-100' onSubmit={handleSubmit}>
@@ -66,13 +69,13 @@ const Login = () => {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="password" name='password' placeholder="Password" />
                             </Form.Group>
-                            <Button variant="success" type="submit" className=' mt-3'>
+                            <Button variant="primary" type="submit" className=' mt-3 w-100'>
                                 Submit
                             </Button>
                             <br />
                             <strong className='text-danger'>{error}</strong>
                         </Form>
-                        {/* <p>Go to registration Pages? <Link to={'/register'}>Register Now</Link></p> */}
+                        <p className='mb-5'>Go to registration Pages? <Link to={'/register'}>Register Now</Link></p>
 
 
                     </ButtonGroup>
@@ -84,3 +87,4 @@ const Login = () => {
 };
 
 export default Login;
+
