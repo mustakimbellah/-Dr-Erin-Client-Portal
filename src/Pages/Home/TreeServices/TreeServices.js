@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import ServiceCard from './ServiceCard';
+import TreeServicesCard from './TreeServicesCard';
 
-const Services = () => {
+const TreeServices = () => {
 
     const [services, setServices] = useState([]);
 
     useEffect(() => {
 
-        fetch('https://doctor-server-side.vercel.app/services')
+        fetch('https://doctor-server-side.vercel.app/treeServices')
             .then(res => res.json())
             .then(data => setServices(data))
 
     }, []);
-
 
     return (
         <div className='container-fluid'>
@@ -24,22 +23,16 @@ const Services = () => {
                             <div className="row d-flex gap-3 text-center">
 
                                 {
-                                    services.map(service => <ServiceCard
+                                    services.map(service => <TreeServicesCard
                                         key={service._id}
                                         service={service}
-                                    ></ServiceCard>)
+                                    ></TreeServicesCard>)
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* 
-            {
-                services.map(service => <ServiceCard
-                    key={service._id}
-                    service={service}
-                ></ServiceCard>)
-            } */}
+
 
 
             </div>
@@ -47,6 +40,4 @@ const Services = () => {
     );
 };
 
-export default Services;
-
-//col-7 col-md-8 col-lg-9
+export default TreeServices;

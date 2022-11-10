@@ -36,6 +36,8 @@ const Header = () => {
 
                         <Nav.Link href="/"><Link to={'/'} className=' fw-bold'>Home</Link></Nav.Link>
 
+                        <Nav.Link href="/"><Link to={'/services'} className=' fw-bold'>Services</Link></Nav.Link>
+
 
                         <Nav.Link href="/blog"><Link to={'/blog'} className=' fw-bold'>Blog</Link></Nav.Link>
 

@@ -2,8 +2,10 @@ import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Home from '../../Pages/Home/Home';
 import ServiceDetails from "../../Pages/Home/Services/ServiceDetails";
+import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -31,7 +33,11 @@ const router = createBrowserRouter([
             {
                 path: '/sericedetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://doctor-server-side.vercel.app/services/${params.id}`)
+            },
+            {
+                path: '/services',
+                element: <PrivateRoute><Services></Services></PrivateRoute>
             }
         ]
     }
