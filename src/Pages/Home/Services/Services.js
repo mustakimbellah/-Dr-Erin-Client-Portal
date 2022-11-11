@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+
 import useTitle from '../../../hooks/useTitle';
+import PostView from '../../Review/PostView';
 import Review from '../../Review/Review';
+
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -48,8 +51,11 @@ const Services = () => {
 
             </div>
 
+            <div>
 
-            <Review></Review>
+                <Review></Review>
+
+            </div>
 
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PostView from './PostView';
 
 const Review = () => {
 
@@ -49,22 +50,13 @@ const Review = () => {
                 <br />
                 <button type="submit">Add Review</button>
             </form>
+
+            <div>
+            </div>
         </div>
 
 
-        // <Form onSubmit={handleAddReview} className='m-5'>
-        //     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        //         <Form.Label>Name</Form.Label>
-        //         <Form.Control onBlur={handleInputBlur} type="name" placeholder="name" required />
-        //     </Form.Group>
-        //     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        //         <Form.Label>Example textarea</Form.Label>
-        //         <Form.Control onBlur={handleInputBlur} as="textarea" rows={3} required />
-        //     </Form.Group>
 
-        //     <Button variant="outline-info">Add Review</Button>
-
-        // </Form>
     );
 };
 

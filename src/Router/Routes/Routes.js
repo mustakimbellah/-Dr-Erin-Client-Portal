@@ -5,7 +5,10 @@ import ServiceDetails from "../../Pages/Home/Services/ServiceDetails";
 import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import PostView from "../../Pages/Review/PostView";
 import Review from "../../Pages/Review/Review";
+import UpdateView from "../../Pages/Review/UpdateView";
+import ViewDb from "../../Pages/ViewDb/ViewDb";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -41,8 +44,23 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><Services></Services></PrivateRoute>
             },
             {
-                path: '/review',
+                path: '/review/add',
                 element: <Review></Review>
+            },
+            {
+                path: '/postview',
+                element: <PostView></PostView>,
+                loader: () => fetch('http://localhost:5000/users')
+
+            },
+            {
+                path: '/update/:id',
+                element: <UpdateView></UpdateView>,
+                loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
+            },
+            {
+                path: '/viewdb',
+                element: <ViewDb></ViewDb>
             }
         ]
     }

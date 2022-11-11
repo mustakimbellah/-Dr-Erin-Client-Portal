@@ -41,7 +41,7 @@ const Header = () => {
 
                         <Nav.Link href="/blog"><Link to={'/blog'} className=' fw-bold'>Blog</Link></Nav.Link>
 
-                        <Nav.Link href="/review"><Link to={'/review'} className=' fw-bold'>review</Link></Nav.Link>
+                        <Nav.Link href="/viewdb"><Link to={'/viewdb'} className=' fw-bold'>my service</Link></Nav.Link>
 
 
 

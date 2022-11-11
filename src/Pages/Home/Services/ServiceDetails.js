@@ -13,27 +13,7 @@ const ServiceDetails = () => {
             <h1>Services Details Information</h1>
             <h2>Service Name: {title}</h2>
 
-            {/* <PhotoProvider>
-                <div className="foo">
 
-                    <PhotoView >
-                        <img src={img} alt="" />
-                    </PhotoView>
-
-                </div>
-
-            </PhotoProvider> */}
-
-
-            {/* <PhotoProvider>
-                <div className="foo">
-                    {images.map((item, index) => (
-                        <PhotoView key={index} src={item}>
-                            <img src={item} alt="" />
-                        </PhotoView>
-                    ))}
-                </div>
-            </PhotoProvider> */}
 
 
 
@@ -43,6 +23,10 @@ const ServiceDetails = () => {
             <h5>Details: {description}</h5>
             <h6>Price : $ {price}</h6>
             <h6>Rating : {rating}</h6>
+
+
+
+
         </div>
     );
 };
