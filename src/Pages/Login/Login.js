@@ -4,8 +4,11 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+
+
 
     const { signIn, providerLogin } = useContext(AuthContext);
 
@@ -13,6 +16,8 @@ const Login = () => {
 
     const GoogleProvider = new GoogleAuthProvider();
 
+
+    useTitle('Login')
 
     const handleSubmit = event => {
         event.preventDefault();

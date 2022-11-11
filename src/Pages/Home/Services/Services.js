@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
+import Review from '../../Review/Review';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
+
+    useTitle('Services')
 
     const [services, setServices] = useState([]);
 
@@ -43,6 +47,10 @@ const Services = () => {
 
 
             </div>
+
+
+            <Review></Review>
+
         </div>
     );
 };

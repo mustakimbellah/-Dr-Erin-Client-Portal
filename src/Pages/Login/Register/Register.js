@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const Register = () => {
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const [error, setError] = useState("");
+
+    useTitle('Register')
 
     const handleUpdateProfile = (name, photoURL) => {
         const profile = {

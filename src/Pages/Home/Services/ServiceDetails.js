@@ -1,8 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import useTitle from '../../../hooks/useTitle';
 
 const ServiceDetails = () => {
+
+    useTitle('Services')
+
     const { img, description, title, price, rating } = useLoaderData();
     return (
         <div className='text-center'>

@@ -3,8 +3,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaDollarSign, FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const ServiceCard = ({ service }) => {
+
+    useTitle('Services')
 
     const { _id, img, price, title, description, rating } = service;
 

@@ -1,7 +1,11 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import useTitle from '../../hooks/useTitle';
 
 const Blog = () => {
+
+    useTitle('Blog');
+
     return (
         <div>
             <div className='text-center m-5'>
